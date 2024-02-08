@@ -27,3 +27,16 @@ function sumArray(arr) {
 }
 
 console.log(sumArray([70, 80, 90, 100])) //340
+
+//Prime Numbers
+
+function checkPrime(num) {
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return false
+        }
+    }
+    return num > 1
+}
+
+console.log(checkPrime(7)) //true
