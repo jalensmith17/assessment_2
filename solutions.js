@@ -71,3 +71,11 @@ function isVowel(char) {
 
 console.log(isVowel('a')) //true
 console.log(isVowel('b')) //false
+
+//getTwoLengths
+
+function getTwoLengths(str1, str2) {
+    return [str1.length, str2.length]
+}
+
+console.log(getTwoLengths('Hank', 'Hippopopalous')) //[4, 14]
