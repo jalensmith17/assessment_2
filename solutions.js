@@ -62,3 +62,12 @@ function calculateCube(num) {
 }
 
 console.log(calculateCube(5)) //125
+
+//Is a Vowel
+
+function isVowel(char) {
+    return 'aeiou'.includes(char.toLowerCase())
+}
+
+console.log(isVowel('a')) //true
+console.log(isVowel('b')) //false
