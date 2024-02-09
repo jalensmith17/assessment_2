@@ -30,6 +30,8 @@ console.log(sumArray([70, 80, 90, 100])) //340
 
 //Prime Numbers
 
+//checkPrime
+
 function checkPrime(num) {
     for (let i = 2; i < num; i++) {
         if (num % i === 0) {
@@ -40,3 +42,23 @@ function checkPrime(num) {
 }
 
 console.log(checkPrime(7)) //true
+
+//printPrimes
+
+function printPrimes(limit) {
+    for (let i = 0; i <= limit; i++) {
+        if (checkPrime(i)) {
+            console.log(i)
+        }
+    }
+}
+
+console.log(printPrimes(97)) //2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97
+
+//Calculate the Cube
+
+function calculateCube(num) {
+    return num * num * num
+}
+
+console.log(calculateCube(5)) //125
