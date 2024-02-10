@@ -79,3 +79,11 @@ function getTwoLengths(str1, str2) {
 }
 
 console.log(getTwoLengths('Hank', 'Hippopopalous')) //[4, 14]
+
+//getMultipleLengths
+
+function getMultipleLengths(arr) {
+    return arr.map(str => str.length)
+}
+
+console.log(getMultipleLengths(["hello", "what", "is", "up", "my", "guy"])) //[5, 4, 2, 2, 2, 3]
