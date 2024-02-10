@@ -116,3 +116,23 @@ function transmogrify(num1, num2, num3) {
 }
 
 console.log(transmogrify(5, 3, 2)) //225
+
+//Project Euler Problem 2
+
+function fib() {
+    let varOne = 0
+    let varTwo = 1
+    let sum = 0
+
+    while (varTwo <= 4000000) {
+        if (varTwo % 2 === 0) {
+            sum += varTwo
+        }
+        let next = varOne + varTwo
+        varOne = varTwo
+        varTwo = next
+    }
+    return sum
+}
+
+console.log(fib()) //4613732
