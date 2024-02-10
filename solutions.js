@@ -95,3 +95,16 @@ function maxOfThree(num1, num2, num3) {
 }
 
 console.log(maxOfThree(6, 9, 5)) //9
+
+//printLongestWord
+
+function printLongestWord(arr) {
+    let longest = ''
+    arr.forEach(word => {
+        if (word.length > longest.length) {
+            longest = word
+        }
+    })
+}
+
+console.log(printLongestWord(["Mario", "Luigi", "Bowser", "Donkey", "Toad", "Yoshi", "Wario", "Rosalina"])) //Rosalina
