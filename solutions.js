@@ -87,3 +87,11 @@ function getMultipleLengths(arr) {
 }
 
 console.log(getMultipleLengths(["hello", "what", "is", "up", "my", "guy"])) //[5, 4, 2, 2, 2, 3]
+
+//maxOfThree
+
+function maxOfThree(num1, num2, num3) {
+    return Math.max(num1, num2, num3)
+}
+
+console.log(maxOfThree(6, 9, 5)) //9
