@@ -108,3 +108,11 @@ function printLongestWord(arr) {
 }
 
 console.log(printLongestWord(["Mario", "Luigi", "Bowser", "Donkey", "Toad", "Yoshi", "Wario", "Rosalina"])) //Rosalina
+
+//transmogrify
+
+function transmogrify(num1, num2, num3) {
+    return Math.pow(num1 * num2, num3)
+}
+
+console.log(transmogrify(5, 3, 2)) //225
