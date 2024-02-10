@@ -136,3 +136,11 @@ function fib() {
 }
 
 console.log(fib()) //4613732
+
+//A Needle in the Haystack
+
+function findNeedle(arr) {
+    return "found the needle at position " + arr.indexOf("needle")
+}
+
+console.log(findNeedle(['random', 'hay', 'everywhere', 'stack', 'hay', 'needle', 'hay'])) //found the needle at position 5
