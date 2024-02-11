@@ -176,3 +176,12 @@ console.log(positiveSum([1, -4, 7, 12])) //20
 //loop through the second string and subtract the count of each digit from the object
 //if the count of each digit is not 0, return false
 //then return true
+
+//3. Are There Duplicates
+//Implement a function called, areThereDuplicates which accepts a variable number of arguments, and checks whether there are any duplicates among the arguments passed in.
+
+//create an empty object
+//loop through the arguments and add the count of each argument to the object
+//if the count of each argument is greater than 1, return true
+//then return false
+
