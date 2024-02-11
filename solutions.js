@@ -165,6 +165,26 @@ console.log(positiveSum([1, -4, 7, 12])) //20
 //if the count of each letter is not 0, return false
 //then return true
 
+//found solution online
+
+function validAnagram(str1, str2) {
+    if (str1.length !== str2.length) {
+        return false
+    }
+    let obj = {}
+    for (let i = 0; i < str1.length; i++) {
+        obj[str1[i]] ? obj[str1[i]] += 1 : obj[str1[i]] = 1
+    }
+    for (let i = 0; i < str2.length; i++) {
+        if (!obj[str2[i]]) {
+            return false
+        } else {
+            obj[str2[i]] -= 1
+        }
+    }
+    return true
+}
+
 
 //2. Same Frequency
 //Given two positive integers, find out if the two numbers have the same frequency of digits.
@@ -177,6 +197,26 @@ console.log(positiveSum([1, -4, 7, 12])) //20
 //if the count of each digit is not 0, return false
 //then return true
 
+function sameFrequency(num1, num2) {
+    let str1 = num1.toString()
+    let str2 = num2.toString()
+    if (str1.length !== str2.length) {
+        return false
+    }
+    let obj = {}
+    for (let i = 0; i < str1.length; i++) {
+        obj[str1[i]] ? obj[str1[i]] += 1 : obj[str1[i]] = 1
+    }
+    for (let i = 0; i < str2.length; i++) {
+        if (!obj[str2[i]]) {
+            return false
+        } else {
+            obj[str2[i]] -= 1
+        }
+    }
+    return true
+}
+
 //3. Are There Duplicates
 //Implement a function called, areThereDuplicates which accepts a variable number of arguments, and checks whether there are any duplicates among the arguments passed in.
 
@@ -184,4 +224,51 @@ console.log(positiveSum([1, -4, 7, 12])) //20
 //loop through the arguments and add the count of each argument to the object
 //if the count of each argument is greater than 1, return true
 //then return false
+
+//found solution online
+function areThereDuplicates() {
+    let obj = {}
+    for (let i = 0; i < arguments.length; i++) {
+        obj[arguments[i]] ? obj[arguments[i]] += 1 : obj[arguments[i]] = 1
+    }
+    for (let key in obj) {
+        if (obj[key] > 1) {
+            return true
+        }
+    }
+    return false
+}
+
+//Sliding Window Pattern
+
+//1. Max Subarray Sum
+//Write a function called maxSubarraySum, which finds the maximum sum of a subarray with the length of the number passed to the function.
+
+//create a variable to store the max sum
+//create a variable to store the temp sum
+//loop through the array and add the first n elements to the temp sum
+//loop through the array starting from the nth element
+//subtract the first element from the temp sum and add the next element
+//if the temp sum is greater than the max sum, set the max sum to the temp sum
+//return the max sum
+
+function maxSubarraySum(arr, n) {
+    let maxSum = 0
+    let tempSum = 0
+    if (arr.length < n) {
+        return null
+    }
+    for (let i = 0; i < n; i++) {
+        maxSum += arr[i]
+    }
+    tempSum = maxSum
+
+    for (let i = n; i < arr.length; i++) {
+        tempSum = tempSum - arr[i - n] + arr[i]
+        maxSum = Math.max(maxSum, tempSum)
+    }
+    return maxSum
+}
+
+
 
