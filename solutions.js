@@ -270,5 +270,39 @@ function maxSubarraySum(arr, n) {
     return maxSum
 }
 
+//2. Min Subarray Length
+//Write a function called minSubArrayLen which accepts two parameters - an array of positive integers and a positive integer.
 
+//create a variable to store the min length
+//create a variable to store the temp sum
+//create a variable to store the start index
+//create a variable to store the end index
+//loop through the array and add the first n elements to the temp sum
+//if the temp sum is greater than or equal to the integer, set the min length to the length of the subarray
+//loop through the array starting from the nth element
+//subtract the first element from the temp sum and add the next element
+//if the temp sum is greater than or equal to the integer, set the min length to the length of the subarray
+//return the min length otherwise return 0
 
+//solution found online
+function minSubArrayLen(arr, num) {
+    let minLen = Infinity
+    let tempSum = 0
+    let start = 0
+    let end = 0
+    while (start < arr.length) {
+        if (tempSum < num && end < arr.length) {
+            tempSum += arr[end]
+            end++
+        } else if (tempSum >= num) {
+            minLen = Math.min(minLen, end - start)
+            tempSum -= arr[start]
+            start++
+        } else {
+            break
+        }
+    }
+    return minLen === Infinity ? 0 : minLen
+}
+
+//3. Find Longest Substring
