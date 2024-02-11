@@ -164,3 +164,15 @@ console.log(positiveSum([1, -4, 7, 12])) //20
 //loop through the second string and subtract the count of each letter from the object
 //if the count of each letter is not 0, return false
 //then return true
+
+
+//2. Same Frequency
+//Given two positive integers, find out if the two numbers have the same frequency of digits.
+
+//convert the two numbers to strings
+//check if the length of the two strings are the same
+//create an empty object
+//loop through the first string and add the count of each digit to the object
+//loop through the second string and subtract the count of each digit from the object
+//if the count of each digit is not 0, return false
+//then return true
