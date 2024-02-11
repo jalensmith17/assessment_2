@@ -331,3 +331,29 @@ function findLongestSubstring(str) {
     }
     return maxLen
 }
+
+//Multiple Pointer Pattern
+
+//1. Count Unique Values
+//Implement a function called countUniqueValues, which accepts a sorted array, and counts the unique values in the array. There can be negative numbers in the array, but it will always be sorted.
+
+//create a variable to store the count
+//create a variable to store the first pointer
+//create a variable to store the second pointer
+//loop through the array
+//if the value at the first pointer is not equal to the value at the second pointer, increment the count and set the first pointer to the second pointer
+//increment the second pointer
+//return the count
+
+function countUniqueValues(arr) {
+    let count = 0
+    let i = 0
+    for (let j = 1; j < arr.length; j++) {
+        if (arr[i] !== arr[j]) {
+            count++
+            i = j
+        }
+    }
+    return count
+}
+
