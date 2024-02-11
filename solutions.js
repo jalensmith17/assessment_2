@@ -306,3 +306,28 @@ function minSubArrayLen(arr, num) {
 }
 
 //3. Find Longest Substring
+//Write a function called findLongestSubstring, which accepts a string and returns the length of the longest substring with all distinct characters.
+
+//create a variable to store the max length
+//create a variable to store the start index
+//create an empty object
+//loop through the string
+//if the character is in the object, set the start index to the index of the character
+//set the max length to the max of the current length and the length of the substring
+//return the max length
+
+//solution found online
+function findLongestSubstring(str) {
+    let maxLen = 0
+    let start = 0
+    let obj = {}
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i]
+        if (obj[char]) {
+            start = Math.max(start, obj[char])
+        }
+        maxLen = Math.max(maxLen, i - start + 1)
+        obj[char] = i + 1
+    }
+    return maxLen
+}
