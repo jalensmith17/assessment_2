@@ -152,3 +152,15 @@ function positiveSum(arr) {
 }
 
 console.log(positiveSum([1, -4, 7, 12])) //20
+
+//Problem Solving Patterns
+
+//1. Valid Anagram
+//Given two strings, write a function to determine if the second string is an anagram of the first. An anagram is a word or phrase formed by rearranging the letters of another, such as "cinema", formed from "iceman".
+
+//check if the length of the two strings are the same
+//create an empty object
+//loop through the first string and add the count of each letter to the object
+//loop through the second string and subtract the count of each letter from the object
+//if the count of each letter is not 0, return false
+//then return true
