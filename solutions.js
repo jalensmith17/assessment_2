@@ -357,3 +357,4 @@ function countUniqueValues(arr) {
     return count
 }
 
+//2. Average Pair
